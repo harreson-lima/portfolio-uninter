@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* variaveis */
 :root {
-  --base-clr: #1f2c49;
+  --base-dark-clr: #001520;
+  --base-light-clr: #052834;
   --neutral-clr: #fdfeff;
-  --primary-color: #40c2a9;
+  --text-clr: #fdfeffce;
+  --primary-clr: #FF8D00;
 }
 
+/* configurações básicas */
 * {
   margin: 0;
   padding: 0;
@@ -17,20 +21,67 @@ html {
 }
 
 body {
-  background-color: var(--base-clr);
+  background-color: var(--base-dark-clr);
   font-family: "Rubik", sans-serif;
 }
 
 .container {
   max-width: 1366px;
   margin-inline: auto;
-  padding-inline: 1rem;
+  padding-inline: 1.5rem;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
 }
 
 .logo {
-  color: var(--primary-color);
-  font-weight: 700;
+  color: var(--primary-clr);
+  font-weight: 500;
 }
+
+.logo span {
+  color: var(--neutral-clr);
+}
+
+.primary-nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: var(--neutral-clr);
+  padding: 0.5em 0.8em;
+  transition: color 0.2s;
+}
+
+.link::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  background-color: var(--primary-clr);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* sections */
 
 section {
   min-height: 100dvh;
@@ -41,44 +92,142 @@ section {
   font-weight: 500;
 }
 
-.header {
+.flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 1rem;
 }
 
-.primary-nav {
-  list-style: none;
+.flex > * {
+  flex: 1;
+}
+
+.paragrafo {
+  color: var(--text-clr);
+  font-size: 1.2rem;
+  padding-block: 1rem;
+  line-height: 1.8rem;
+}
+
+.flex-img {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-img img {
+  max-width: 90%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section h3 {
+  color: var(--primary-clr);
+  font-size: 2.5rem;
+}
+
+/* home */
+
+.home h1 {
+  font-size: 5rem;
+  color:var(--primary-clr);
+  text-wrap: balance;
+}
+
+/* sobre mim */
+
+.sobre-mim {
+  background-color: var(--base-light-clr);
+}
+
+/* formação academica */
+
+.idiomas {
+  padding-left: 2rem;
+}
+
+.idioma::marker {
+  color: var(--primary-clr);
+  font-size: 1.5rem;
+}
+
+/* portfolio */
+
+.portfolio {
+  background-color: var(--base-light-clr);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   padding-block: 2rem;
+}
+
+.portfolio > * {
+  width: 100%;
+}
+
+.portfolio h3 {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: 1.5rem;
 }
 
-.link {
-  text-decoration: none;
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: var(--base-dark-clr);
+}
+
+.card img {
+  min-height: 55%;
+}
+
+.card-info {
+  padding-block: 0.5em;
+}
+
+.projeto-nome {
+  font-size: 1.2rem;
+  color: var(--primary-clr);
+}
+
+.projeto-links {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100%;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.projeto-links a i {
   color: var(--neutral-clr);
-  padding: 0.5em 0.8em;
+  transition: color 0.25s;
 }
 
-.sobre-mim {
-  background-color: red;
+.projeto-links a:hover i {
+  color: var(--primary-clr);
 }
 
-.academico {
-  background-color: blue;
-}
-
-.portfolio {
-  background-color: yellow;
-}
+/* contato */
 
 .contato {
-  background-color: peru;
+  
 }
 
-
+/* footer */
 
 footer {
+  background-color: var(--base-light-clr);
+  color: var(--text-clr);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Harreson Lima - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <!-- Header -->
   <header id="top">
     <div class=" container header">
-      <h2 class="logo title">Harreson Lima</h2>
+      <h2 class="logo">Harreson <span>Lima</span></h2>
       <nav>
         <ul class="primary-nav">
           <li><a href="#sobre-mim" class="link">Sobre mim</a></li>
@@ -22,20 +23,127 @@
     </div>
   </header>
   <!-- Home Section -->
-  <section class="container home">
-      <!-- <h1 class="title">Desenvolvedor Front End</h1> -->
+  <section class="container home flex">
+    <div class="text">
+      <h1 class="title">Desenvolvedor <br>Front End</h1>
+      <p class="paragrafo">
+        Criando soluções inovadoras para problemas reais do seu negócio.
+      </p>
+    </div>
+    <div class="flex-img">
+      <img src="assets/undraw_programming_re_kg9v.svg" alt="pessoa programando">
+    </div>
   </section>
   <!-- Sobre mim Section -->
-  <section id="sobre-mim" class="container sobre-mim">
-    
+  <section id="sobre-mim" class="container sobre-mim flex">
+    <div class="flex-img">
+      <img src="assets/undraw_ninja_e-52-b.svg" alt="pessoa programando">
+    </div>
+    <div class="text">
+      <h3 class="title">Sobre Mim</h3>
+      <p class="paragrafo">
+        Me chamo Harreson. Sou um desenvolvedor front end apaixonado por 
+        tecnologia, games e animes. Minha jornada é impulsionada por uma 
+        sede insaciável por aprendizado e inovação. Transformo minha paixão 
+        em expertise, criando interfaces intuitivas e funcionais enquanto me 
+        mantenho atualizado com as últimas tendências da indústria. Com uma 
+        mentalidade de aprendizado contínuo, estou sempre explorando novas 
+        tecnologias para aprimorar minhas habilidades e contribuir para a 
+        comunidade de desenvolvedores.
+      </p>
+    </div>
   </section>
   <!-- Formação academica Section -->
-  <section id="academico" class="container academico">
-
+  <section id="academico" class="container academico flex">
+    <div class="text">
+      <h3 class="title">Formação Acadêmica</h3>
+      <p class="paragrafo">
+        Atualmente, estou cursando Análise e Desenvolvimento de Sistemas na 
+        UNINTER. Este curso tem me proporcionado uma base sólida em programação, 
+        design de software e princípios de desenvolvimento de sistemas.
+      </p>
+      <h3 class="title">Idiomas</h3>
+      <ul class="idiomas">
+        <li class="idioma paragrafo"><b>Português:</b> Fluente (idioma nativo). Minha fluência em 
+          português me permite comunicar ideias de forma clara e eficaz, tanto 
+          verbalmente quanto por escrito.
+        </li>
+        <li class="idioma paragrafo"><b>Inglês:</b> Intermediário. Possuo habilidades sólidas de 
+          compreensão e comunicação em inglês, permitindo-me interagir em ambientes 
+          profissionais e acadêmicos com confiança.
+        </li>
+      </ul>
+    </div>
+    <div class="flex-img">
+      <img src="assets/undraw_certificate_re_yadi.svg" alt="pessoa programando">
+    </div>
   </section>
   <!-- Portfolio Section -->
   <section id="portfolio" class="container portfolio">
-
+    <h3 class="title">Portfolio</h3>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/1-removebg-preview.png" alt="computador e smartphone exibindo um site">
+        <div class="card-info">
+          <h5 class="projeto-nome">
+            Dev card
+          </h5>
+          <p class="paragrafo">
+            Site que gera um cartão ao passar seu nome de usuario do github.
+          </p>
+        </div>
+        <div class="projeto-links">
+          <a href="https://github.com/harreson-lima/Dev_Card" target="_blank" title="github repositorio"><i class="fa-brands fa-github"></i></a>
+          <a href="https://harreson-lima.github.io/Dev_Card/" target="_blank" title="link projeto"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/3-removebg-preview.png" alt="computador e smartphone exibindo um site">
+        <div class="card-info">
+          <h5 class="projeto-nome">
+            Contador de Ano Novo
+          </h5>
+          <p class="paragrafo">
+            Site que exibe o tempo restante até o ano de 2025.
+          </p>
+        </div>
+        <div class="projeto-links">
+          <a href="https://github.com/harreson-lima/new_year_countdown" target="_blank" title="github repositorio"><i class="fa-brands fa-github"></i></a>
+          <a href="https://harreson-lima.github.io/new_year_countdown/" target="_blank" title="link projeto"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/2-removebg-preview.png" alt="computador e smartphone exibindo um site">
+        <div class="card-info">
+          <h5 class="projeto-nome">
+            Gerador de Senhas
+          </h5>
+          <p class="paragrafo">
+            Site que gera senhas aleatorias personalizaveis.
+          </p>
+        </div>
+        <div class="projeto-links">
+          <a href="https://github.com/harreson-lima/passwordGenerator" target="_blank" title="github repositorio"><i class="fa-brands fa-github"></i></a>
+          <a href="https://harreson-lima.github.io/passwordGenerator" target="_blank" title="link projeto"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/4-removebg-preview.png" alt="computador e smartphone exibindo um site">
+        <div class="card-info">
+          <h5 class="projeto-nome">
+            VoiceWave
+          </h5>
+          <p class="paragrafo">
+            Gravador de voz online, no qual você pode salvar e baixar seu audios.
+          </p>
+        </div>
+        <div class="projeto-links">
+          <a href="https://github.com/harreson-lima/voice-wave" target="_blank" title="github repositorio"><i class="fa-brands fa-github"></i></a>
+          <a href="https://harreson-lima.github.io/voice-wave/" target="_blank" title="link projeto"><i class="fa-solid fa-link"></i></a>
+        </div>
+      </div>
+    </div>
+    
   </section>
   <!-- Contato Section -->
   <section id="contato" class="container contato">
