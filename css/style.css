@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 
 /* variaveis */
 :root {
@@ -6,7 +6,8 @@
   --base-light-clr: #052834;
   --neutral-clr: #fdfeff;
   --text-clr: #fdfeffce;
-  --primary-clr: #FF8D00;
+  --primary-clr: #ff8d00;
+  --fs-100: 1.2rem;
 }
 
 /* configurações básicas */
@@ -64,7 +65,7 @@ body {
 }
 
 .link::after {
-  content: '';
+  content: "";
   width: 100%;
   height: 3px;
   position: absolute;
@@ -102,7 +103,7 @@ section {
 
 .paragrafo {
   color: var(--text-clr);
-  font-size: 1.2rem;
+  font-size: var(--fs-100);
   padding-block: 1rem;
   line-height: 1.8rem;
 }
@@ -132,7 +133,7 @@ section h3 {
 
 .home h1 {
   font-size: 5rem;
-  color:var(--primary-clr);
+  color: var(--primary-clr);
   text-wrap: balance;
 }
 
@@ -160,7 +161,7 @@ section h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-   padding-block: 2rem;
+  padding-block: 2rem;
 }
 
 .portfolio > * {
@@ -195,7 +196,7 @@ section h3 {
 }
 
 .projeto-nome {
-  font-size: 1.2rem;
+  font-size: var(--fs-100);
   color: var(--primary-clr);
 }
 
@@ -205,7 +206,7 @@ section h3 {
   align-items: end;
   height: 100%;
   gap: 1rem;
-  font-size: 1.2rem;
+  font-size: var(--fs-100);
 }
 
 .projeto-links a i {
@@ -220,7 +221,64 @@ section h3 {
 /* contato */
 
 .contato {
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.container h3 {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.contato form {
+  width: clamp(20rem, 30vw, 40rem);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  color: var(--text-clr);
+  font-size: 1.1rem;
+}
+
+.contato form label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-clr);
+}
+
+.contato form input {
+  max-width: 100%;
+  height: 2rem;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+  font-size: 1.1rem;
+}
+
+textarea {
+  max-width: 100%;
+  max-height: 10rem;
+  padding: 0.2em 0.5em;
+  border-radius: 4px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--primary-clr);
+}
+
+.contato form button {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  color: var(--neutral-clr);
+  background-color: var(--primary-clr);
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 /* footer */
@@ -238,4 +296,26 @@ footer {
   position: fixed;
   right: 1rem;
   bottom: 1rem;
+}
+
+/* responsividade */
+
+@media (max-width: 1000px) {
+  .home h1 {
+    font-size: 3rem;
+  }
+
+  .flex-img {
+    display: none;
+  }
+}
+
+@media (max-width: 830px) {
+  .header {
+    justify-content: center;
+  }
+
+  .primary-nav {
+    display: none;
+  }
 }
